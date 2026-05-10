@@ -3,73 +3,342 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Nombre | Videografía y Fotografía de Bodas</title>
+    <title>Tu Nombre Films | Videografía Cinematográfica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">Tu Nombre Films</div>
-        <ul class="nav-links">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#portafolio">Portafolio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <span class="logo-main">Tu Nombre</span>
+            <span class="logo-sub">FILMS</span>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menú">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#inicio" class="nav-link">Inicio</a></li>
+            <li><a href="#portafolio" class="nav-link">Portafolio</a></li>
+            <li><a href="#servicios" class="nav-link">Servicios</a></li>
+            <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+            <li><a href="#contacto" class="nav-link nav-cta">Contacto</a></li>
         </ul>
     </nav>
 
+    <!-- HERO -->
     <header id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
         <div class="hero-content">
-            <h1>Inmortalizamos tu gran día</h1>
-            <p>Emociones reales, momentos únicos y recuerdos para toda la vida en formato cinematográfico.</p>
-            <a href="#contacto" class="btn">Reserva tu fecha</a>
+            <p class="hero-eyebrow">Videografía Cinematográfica</p>
+            <h1 class="hero-title">Cada historia<br><em>merece ser contada</em></h1>
+            <p class="hero-subtitle">Bodas · Eventos · Publicidad · Dron</p>
+            <div class="hero-actions">
+                <a href="#portafolio" class="btn btn-primary">Ver mi trabajo</a>
+                <a href="#contacto" class="btn btn-outline">Reservar fecha</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Descubre más</span>
+            <div class="scroll-line"></div>
         </div>
     </header>
 
+    <!-- CATEGORÍAS DE PORTFOLIO -->
     <section id="portafolio" class="portfolio">
-        <h2>Nuestro Trabajo</h2>
-        <p>Un vistazo a las historias de amor que hemos contado.</p>
+        <div class="section-header">
+            <p class="section-eyebrow">Portafolio</p>
+            <h2>Historias que hemos<br><em>inmortalizado</em></h2>
+        </div>
+
+        <!-- Tabs de categoría -->
+        <div class="portfolio-tabs">
+            <button class="tab-btn active" data-filter="all">Todos</button>
+            <button class="tab-btn" data-filter="bodas">Bodas</button>
+            <button class="tab-btn" data-filter="eventos">Eventos</button>
+            <button class="tab-btn" data-filter="publicidad">Publicidad</button>
+        </div>
+
         <div class="video-grid">
-            <div class="video-item">
-                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Boda de Ejemplo 1" frameborder="0" allowfullscreen></iframe>
+            <!-- Boda 1 -->
+            <div class="video-card" data-category="bodas">
+                <div class="video-thumb" data-videoid="tgbNymZ7vqY">
+                    <img src="https://img.youtube.com/vi/tgbNymZ7vqY/hqdefault.jpg" alt="Boda Ana & Carlos" loading="lazy">
+                    <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+                    <div class="video-label">Boda</div>
+                </div>
+                <div class="video-info">
+                    <h3>Ana & Carlos</h3>
+                    <p>Finca El Olivar, Sevilla · 2025</p>
+                </div>
             </div>
-            <div class="video-item">
-                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Boda de Ejemplo 2" frameborder="0" allowfullscreen></iframe>
+            <!-- Boda 2 -->
+            <div class="video-card" data-category="bodas">
+                <div class="video-thumb" data-videoid="tgbNymZ7vqY">
+                    <img src="https://img.youtube.com/vi/tgbNymZ7vqY/hqdefault.jpg" alt="Boda María & Jorge" loading="lazy">
+                    <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+                    <div class="video-label">Boda</div>
+                </div>
+                <div class="video-info">
+                    <h3>María & Jorge</h3>
+                    <p>Cortijo Las Flores, Málaga · 2025</p>
+                </div>
             </div>
-            <div class="video-item">
-                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Boda de Ejemplo 3" frameborder="0" allowfullscreen></iframe>
+            <!-- Evento -->
+            <div class="video-card" data-category="eventos">
+                <div class="video-thumb" data-videoid="tgbNymZ7vqY">
+                    <img src="https://img.youtube.com/vi/tgbNymZ7vqY/hqdefault.jpg" alt="Evento corporativo" loading="lazy">
+                    <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+                    <div class="video-label">Evento</div>
+                </div>
+                <div class="video-info">
+                    <h3>Gala Anual Empresa X</h3>
+                    <p>Hotel Alfonso XIII, Sevilla · 2024</p>
+                </div>
+            </div>
+            <!-- Publicidad -->
+            <div class="video-card" data-category="publicidad">
+                <div class="video-thumb" data-videoid="tgbNymZ7vqY">
+                    <img src="https://img.youtube.com/vi/tgbNymZ7vqY/hqdefault.jpg" alt="Spot publicitario tienda" loading="lazy">
+                    <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+                    <div class="video-label">Publicidad</div>
+                </div>
+                <div class="video-info">
+                    <h3>Spot Boutique Moda</h3>
+                    <p>Granada · 2025</p>
+                </div>
+            </div>
+            <!-- Boda 3 -->
+            <div class="video-card" data-category="bodas">
+                <div class="video-thumb" data-videoid="tgbNymZ7vqY">
+                    <img src="https://img.youtube.com/vi/tgbNymZ7vqY/hqdefault.jpg" alt="Boda Lucía & David" loading="lazy">
+                    <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+                    <div class="video-label">Boda</div>
+                </div>
+                <div class="video-info">
+                    <h3>Lucía & David</h3>
+                    <p>Hacienda Benazuza, Sevilla · 2024</p>
+                </div>
+            </div>
+            <!-- Evento 2 -->
+            <div class="video-card" data-category="eventos">
+                <div class="video-thumb" data-videoid="tgbNymZ7vqY">
+                    <img src="https://img.youtube.com/vi/tgbNymZ7vqY/hqdefault.jpg" alt="Bautizo & Comunión" loading="lazy">
+                    <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+                    <div class="video-label">Evento</div>
+                </div>
+                <div class="video-info">
+                    <h3>Primera Comunión Sofía</h3>
+                    <p>San Fernando, Cádiz · 2025</p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- MODAL DE VIDEO -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">✕</button>
+            <div class="modal-iframe-wrap">
+                <iframe id="modalIframe" src="" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICIOS -->
     <section id="servicios" class="services">
-        <h2>Servicios</h2>
-        <div class="services-container">
-            <div class="service-box">
-                <h3>Video Cinematográfico</h3>
-                <p>Películas de boda en alta resolución (4K) con edición profesional, capturando la esencia de vuestro día.</p>
+        <div class="services-bg"></div>
+        <div class="section-header light">
+            <p class="section-eyebrow">Lo que ofrezco</p>
+            <h2>Servicios</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 10l4.553-2.069A1 1 0 0121 8.882v6.236a1 1 0 01-1.447.894L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/></svg>
+                </div>
+                <h3>Bodas Cinematográficas</h3>
+                <p>Películas de boda en 4K con edición narrativa, música licenciada y entrega en formato digital y USB personalizado.</p>
+                <ul class="service-list">
+                    <li>Cobertura completa del día</li>
+                    <li>Highlights de 5–8 min</li>
+                    <li>Vídeo completo de la ceremonia</li>
+                    <li>Entrega en 4–6 semanas</li>
+                </ul>
             </div>
-            <div class="service-box">
-                <h3>Fotografía Documental</h3>
-                <p>Sin posados forzados. Capturamos la naturalidad, los detalles y la emoción de cada instante.</p>
+            <div class="service-card featured">
+                <div class="service-badge">Más solicitado</div>
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+                <h3>Pack Completo Boda</h3>
+                <p>Video + fotografía + dron en un único paquete. La opción perfecta para cubrirlo todo sin preocuparte de coordinar varios profesionales.</p>
+                <ul class="service-list">
+                    <li>Video cinematográfico 4K</li>
+                    <li>500+ fotografías editadas</li>
+                    <li>Tomas aéreas con dron</li>
+                    <li>Álbum digital personalizado</li>
+                </ul>
             </div>
-            <div class="service-box">
-                <h3>Tomas Aéreas (Dron)</h3>
-                <p>Vistas espectaculares de vuestra celebración para darle un toque verdaderamente de película.</p>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                </div>
+                <h3>Eventos & Publicidad</h3>
+                <p>Cobertura de eventos corporativos, spots publicitarios para negocios, redes sociales y campañas digitales.</p>
+                <ul class="service-list">
+                    <li>Vídeos para Instagram/TikTok</li>
+                    <li>Spots para tiendas y negocios</li>
+                    <li>Eventos sociales y corporativos</li>
+                    <li>Presupuesto a medida</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <h3>Tomas Aéreas con Dron</h3>
+                <p>Imágenes aéreas espectaculares con dron certificado para bodas, fincas, inmobiliarias y proyectos creativos.</p>
+                <ul class="service-list">
+                    <li>Dron con licencia A1/A3</li>
+                    <li>Vídeo 4K y foto aérea</li>
+                    <li>Servicio independiente o añadido</li>
+                    <li>Zonas: Andalucía y alrededores</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <footer id="contacto" class="contact">
-        <h2>Hablemos de vuestra boda</h2>
-        <p>¿Os casáis pronto? Escribidme y miramos disponibilidad.</p>
-        <div class="contact-info">
-            <p>Email: hola@tunombre.com</p>
-            <p>Teléfono / WhatsApp: +34 600 000 000</p>
-            <p>Instagram: @TuNombreFilms</p>
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="about">
+        <div class="about-img">
+            <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Videógrafo en acción" loading="lazy">
         </div>
-        <p class="copyright">© 2026 Tu Nombre Films. Todos los derechos reservados.</p>
+        <div class="about-text">
+            <p class="section-eyebrow">Sobre mí</p>
+            <h2>Una mirada<br><em>diferente</em></h2>
+            <p>Soy videógrafo con sede en Andalucía, especializado en contar historias reales con una estética cinematográfica. Cada boda, cada evento y cada proyecto de publicidad es único — y así lo trato.</p>
+            <p>No solo grabo momentos: construyo relatos visuales que emocionan y perduran. Con equipo profesional 4K, dron certificado y años de experiencia, me adapto a cada cliente y presupuesto.</p>
+            <div class="about-stats">
+                <div class="stat">
+                    <span class="stat-num">+80</span>
+                    <span class="stat-label">Bodas filmadas</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">+5</span>
+                    <span class="stat-label">Años de experiencia</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">4K</span>
+                    <span class="stat-label">Calidad de imagen</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="testimonials">
+        <div class="section-header">
+            <p class="section-eyebrow">Lo que dicen</p>
+            <h2>Parejas que<br><em>confiaron en mí</em></h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"El vídeo de nuestra boda es simplemente perfecto. Cada vez que lo vemos lloramos de emoción. Capturó cada detalle que no recordábamos y nos transporta de vuelta a ese día mágico."</p>
+                <div class="testimonial-author">
+                    <strong>Ana & Carlos</strong>
+                    <span>Boda en Sevilla, 2025</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Profesional, discreto y con un ojo increíble para los momentos especiales. Nuestros invitados apenas le notaron, pero el resultado es espectacular. 100% recomendable."</p>
+                <div class="testimonial-author">
+                    <strong>María & Jorge</strong>
+                    <span>Boda en Málaga, 2025</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Contratamos el pack completo y fue la mejor decisión. Video, fotos y dron en un único paquete, sin complicaciones. El spot que nos hizo para la tienda triplicó nuestras visitas."</p>
+                <div class="testimonial-author">
+                    <strong>Boutique Moda Granada</strong>
+                    <span>Vídeo publicitario, 2024</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <footer id="contacto" class="contact">
+        <div class="contact-inner">
+            <div class="contact-text">
+                <p class="section-eyebrow light">Hablemos</p>
+                <h2>¿Tienes una fecha<br><em>en mente?</em></h2>
+                <p>Cuéntame cuándo es tu gran día o proyecto. Compruebo disponibilidad y te respondo en menos de 24 h.</p>
+                <div class="contact-links">
+                    <a href="mailto:hola@tunombre.com" class="contact-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        hola@tunombre.com
+                    </a>
+                    <a href="https://wa.me/34600000000" target="_blank" class="contact-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        +34 600 000 000
+                    </a>
+                    <a href="https://instagram.com/tunombrefilms" target="_blank" class="contact-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        @TuNombreFilms
+                    </a>
+                </div>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="tu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="servicio">Tipo de servicio</label>
+                    <select id="servicio">
+                        <option value="">Selecciona un servicio</option>
+                        <option>Vídeo de boda</option>
+                        <option>Pack completo (vídeo + foto)</option>
+                        <option>Vídeo de evento</option>
+                        <option>Vídeo publicitario / tienda</option>
+                        <option>Tomas con dron</option>
+                        <option>Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fecha">Fecha del evento</label>
+                    <input type="date" id="fecha">
+                </div>
+                <div class="form-group full">
+                    <label for="mensaje">Cuéntame más</label>
+                    <textarea id="mensaje" rows="4" placeholder="Dónde es, cuántos invitados, qué necesitáis..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary full-btn">Enviar mensaje</button>
+                <p class="form-note">* El formulario abre tu cliente de correo. También puedes escribirme directamente a hola@tunombre.com</p>
+            </form>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Tu Nombre Films · Hecho con ♥ en Andalucía</p>
+            <div class="footer-links">
+                <a href="#">Política de privacidad</a>
+                <a href="#">Aviso legal</a>
+            </div>
+        </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
