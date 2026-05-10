@@ -75,21 +75,25 @@ document.addEventListener('keydown', e => {
 });
 
 // --- FORMULARIO: mailto fallback ---
-const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const nombre = document.getElementById('nombre').value;
-    const email = document.getElementById('email').value;
-    const servicio = document.getElementById('servicio').value;
-    const fecha = document.getElementById('fecha').value;
-    const mensaje = document.getElementById('mensaje').value;
-
-    const subject = encodeURIComponent(`Consulta desde web: ${servicio || 'Información'}`);
-    const body = encodeURIComponent(
-        `Hola,\n\nMe llamo ${nombre} y me interesa: ${servicio}.\n\nFecha del evento: ${fecha || 'Por determinar'}\n\nMensaje:\n${mensaje}\n\nEmail de contacto: ${email}`
-    );
-    window.location.href = `mailto:hola@tunombre.com?subject=${subject}&body=${body}`;
-});
+ const contactForm = document.getElementById('contactForm');
+   contactForm.addEventListener('submit', async (e) => {
+       e.preventDefault();
+       const btn = contactForm.querySelector('button[type="submit"]');
+       btn.textContent = 'Enviando...';
+       btn.disabled = true;
+       const data = new FormData(contactForm);
+       const res = await fetch(contactForm.action, {
+           method: 'POST', body: data,
+           headers: { 'Accept': 'application/json' }
+       });
+       if (res.ok) {
+           btn.textContent = '✓ Mensaje enviado';
+           contactForm.reset();
+       } else {
+           btn.textContent = 'Error, inténtalo de nuevo';
+           btn.disabled = false;
+       }
+   });
 
 // --- ANIMACIONES AL HACER SCROLL (Intersection Observer) ---
 const observerOptions = { threshold: 0.12, rootMargin: '0px 0px -40px 0px' };
