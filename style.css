@@ -332,13 +332,13 @@ em { font-style: italic; color: var(--gold); }
     position: relative;
     overflow: hidden;
     border-radius: 4px;
-    aspect-ratio: 16/10;
+    aspect-ratio: 16/9;
     background: var(--dark);
 }
 .video-thumb img {
-    width: 100%; height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    transition: transform 0.6s var(--transition);
 }
 .video-card:hover .video-thumb img { transform: scale(1.06); }
 .play-btn {
