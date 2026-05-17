@@ -782,3 +782,35 @@ em { font-style: italic; color: var(--gold); }
     .footer-bottom { flex-direction: column; text-align: center; padding: 20px 24px; }
     .hero-actions { flex-direction: column; align-items: center; }
 }
+
+/* INSTAGRAM REEL */
+.instagram-card {
+    position: relative;
+}
+.video-label-top {
+    position: absolute;
+    top: 12px; left: 12px;
+    background: var(--gold);
+    color: var(--white);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 2px;
+    z-index: 10;
+}
+.instagram-reel-wrap {
+    border-radius: 8px;
+    overflow: hidden;
+    background: #111;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.instagram-reel-wrap .instagram-media {
+    border-radius: 8px !important;
+    min-width: 100% !important;
+    margin: 0 !important;
+}
