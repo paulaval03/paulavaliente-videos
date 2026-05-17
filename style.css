@@ -783,34 +783,32 @@ em { font-style: italic; color: var(--gold); }
     .hero-actions { flex-direction: column; align-items: center; }
 }
 
-/* INSTAGRAM REEL */
-.instagram-card {
-    position: relative;
+/* INSTAGRAM THUMB — igual que el resto de tarjetas */
+.instagram-thumb {
+    display: block;
+    text-decoration: none;
 }
-.video-label-top {
-    position: absolute;
-    top: 12px; left: 12px;
-    background: var(--gold);
-    color: var(--white);
-    font-size: 0.62rem;
-    font-weight: 700;
+.instagram-play {
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(10,10,8,0.45);
+}
+.instagram-play svg {
+    width: 38px;
+    height: 38px;
+    fill: var(--white);
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+    transition: transform 0.3s;
+}
+.instagram-play span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    padding: 4px 10px;
-    border-radius: 2px;
-    z-index: 10;
+    color: var(--white);
+    opacity: 0.9;
 }
-.instagram-reel-wrap {
-    border-radius: 8px;
-    overflow: hidden;
-    background: #111;
-    min-height: 480px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.instagram-reel-wrap .instagram-media {
-    border-radius: 8px !important;
-    min-width: 100% !important;
-    margin: 0 !important;
+.video-card:hover .instagram-play svg {
+    transform: scale(1.12);
 }
