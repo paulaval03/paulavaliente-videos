@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://paulavaliente-videos.pages.dev/sitemap.xml
+Sitemap: https://paulavalientefilms.es/sitemap.xml
