@@ -53,7 +53,9 @@ const modalIframe = document.getElementById('modalIframe');
 const modalClose = document.getElementById('modalClose');
 const modalOverlay = document.getElementById('modalOverlay');
 
-document.querySelectorAll('.video-thumb[data-videoid]').forEach(thumb => {
+document.querySelectorAll('.video-thumb').forEach(thumb => {
+    // Solo abrir modal en tarjetas de YouTube (tienen data-videoid y NO son enlaces)
+    if (!thumb.dataset.videoid || thumb.tagName === 'A') return;
     thumb.addEventListener('click', () => {
         const videoId = thumb.dataset.videoid;
         modalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
