@@ -53,7 +53,7 @@ const modalIframe = document.getElementById('modalIframe');
 const modalClose = document.getElementById('modalClose');
 const modalOverlay = document.getElementById('modalOverlay');
 
-document.querySelectorAll('.video-thumb').forEach(thumb => {
+document.querySelectorAll('.video-thumb[data-videoid]').forEach(thumb => {
     thumb.addEventListener('click', () => {
         const videoId = thumb.dataset.videoid;
         modalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
