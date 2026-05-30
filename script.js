@@ -1,5 +1,5 @@
 /* ================================================
-   TU NOMBRE FILMS — JavaScript
+   PAULA VALIENTE FILMS — JavaScript
    ================================================ */
 
 // --- NAVBAR: scroll effect + hamburger ---
@@ -53,9 +53,8 @@ const modalIframe = document.getElementById('modalIframe');
 const modalClose = document.getElementById('modalClose');
 const modalOverlay = document.getElementById('modalOverlay');
 
-document.querySelectorAll('.video-thumb').forEach(thumb => {
-    // Solo abrir modal en tarjetas de YouTube (tienen data-videoid y NO son enlaces)
-    if (!thumb.dataset.videoid || thumb.tagName === 'A') return;
+// Modificamos el selector para que SOLO aplique a miniaturas con un ID de YouTube válido
+document.querySelectorAll('.video-thumb[data-videoid]').forEach(thumb => {
     thumb.addEventListener('click', () => {
         const videoId = thumb.dataset.videoid;
         modalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
@@ -77,25 +76,25 @@ document.addEventListener('keydown', e => {
 });
 
 // --- FORMULARIO: mailto fallback ---
- const contactForm = document.getElementById('contactForm');
-   contactForm.addEventListener('submit', async (e) => {
-       e.preventDefault();
-       const btn = contactForm.querySelector('button[type="submit"]');
-       btn.textContent = 'Enviando...';
-       btn.disabled = true;
-       const data = new FormData(contactForm);
-       const res = await fetch(contactForm.action, {
-           method: 'POST', body: data,
-           headers: { 'Accept': 'application/json' }
-       });
-       if (res.ok) {
-           btn.textContent = '✓ Mensaje enviado';
-           contactForm.reset();
-       } else {
-           btn.textContent = 'Error, inténtalo de nuevo';
-           btn.disabled = false;
-       }
-   });
+const contactForm = document.getElementById('contactForm');
+contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = contactForm.querySelector('button[type="submit"]');
+    btn.textContent = 'Enviando...';
+    btn.disabled = true;
+    const data = new FormData(contactForm);
+    const res = await fetch(contactForm.action, {
+        method: 'POST', body: data,
+        headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+        btn.textContent = '✓ Mensaje enviado';
+        contactForm.reset();
+    } else {
+        btn.textContent = 'Error, inténtalo de nuevo';
+        btn.disabled = false;
+    }
+});
 
 // --- ANIMACIONES AL HACER SCROLL (Intersection Observer) ---
 const observerOptions = { threshold: 0.12, rootMargin: '0px 0px -40px 0px' };
