@@ -54,13 +54,7 @@
             height: 100%;
             border: 0;
         }
-        .hero-video-wrapper::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            z-index: 1;
-        }
+        
     </style>
 
     <script type="application/ld+json">
@@ -90,7 +84,7 @@
             iframe.addEventListener('load', () => {
                 setTimeout(() => {
                     poster.classList.add('loaded');
-                }, 1500);
+                }, 800);
             });
         });
     </script>
@@ -121,7 +115,7 @@
                 <div class="hero-video-poster"></div>
                 <iframe
                     id="heroVideo"
-                    src="https://www.youtube.com/embed/7PpufOaEaes?autoplay=1&mute=1&loop=1&playlist=7PpufOaEaes&controls=0&rel=0&modestbranding=1&playsinline=1"
+                    src="https://www.youtube-nocookie.com/embed/7PpufOaEaes?autoplay=1&mute=1&loop=1&playlist=7PpufOaEaes&controls=0&rel=0&playsinline=1&vq=hd1080" loading="eager"
                     frameborder="0"
                     allow="autoplay; fullscreen"
                     allowfullscreen
