@@ -845,3 +845,10 @@ em { font-style: italic; color: var(--gold); }
 .video-card:hover .instagram-play svg {
     transform: scale(1.12);
 }
+
+
+.hero-video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

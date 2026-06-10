@@ -76,18 +76,7 @@
     }
     </script>
 
-    <script>
-        window.addEventListener('load', () => {
-            const iframe = document.getElementById('heroVideo');
-            const poster = document.querySelector('.hero-video-poster');
-        
-            iframe.addEventListener('load', () => {
-                setTimeout(() => {
-                    poster.classList.add('loaded');
-                }, 800);
-            });
-        });
-    </script>
+    
 </head>
 <body>
 
@@ -112,15 +101,15 @@
     <!-- HERO -->
     <header id="inicio" class="hero">
             <div class="hero-video-wrapper">
-                <div class="hero-video-poster"></div>
-                <iframe
+                <video
                     id="heroVideo"
-                    src="https://www.youtube-nocookie.com/embed/7PpufOaEaes?autoplay=1&mute=1&loop=1&playlist=7PpufOaEaes&controls=0&rel=0&playsinline=1&vq=hd1080" loading="eager"
-                    frameborder="0"
-                    allow="autoplay; fullscreen"
-                    allowfullscreen
-                    title="Showreel Paula Valiente Films">
-                </iframe>
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="auto">
+                    <source src="video-web.mp4" type="video/mp4">
+                </video>
         </div>
         
         <div class="hero-content">
