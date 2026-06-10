@@ -81,6 +81,19 @@
       "areaServed": "Andalucía"
     }
     </script>
+
+    <script>
+        window.addEventListener('load', () => {
+            const iframe = document.getElementById('heroVideo');
+            const poster = document.querySelector('.hero-video-poster');
+        
+            iframe.addEventListener('load', () => {
+                setTimeout(() => {
+                    poster.classList.add('loaded');
+                }, 1500);
+            });
+        });
+    </script>
 </head>
 <body>
 
