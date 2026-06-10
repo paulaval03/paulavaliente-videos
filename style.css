@@ -54,6 +54,7 @@ em { font-style: italic; color: var(--gold); }
     min-width: 177.78vh;
     transform: translate(-50%, -50%);
     overflow: hidden;
+    z-index: 0;
 }
 
 .hero-video-poster {
