@@ -35,6 +35,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .hero-video-wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100vw;
+            height: 56.25vw;   /* ratio 16:9 */
+            min-height: 100%;
+            min-width: 177.78vh; /* 16:9 inverso */
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+        .hero-video-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
 
     <script type="application/ld+json">
     {
@@ -78,7 +97,9 @@
     <!-- HERO -->
     <header id="inicio" class="hero">
         <div class="hero-overlay"></div>
-        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="hero-video-wrapper">
+            <iframe src="https://www.youtube.com/embed/7PpufOaEaes?autoplay=1&mute=1&loop=1&playlist=7PpufOaEaes&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3&disablekb=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen title="Showreel Paula Valiente Films"></iframe>
+        </div>
         <div class="hero-content">
             <p class="hero-eyebrow">Videografía Cinematográfica</p>
             <h1 class="hero-title">Cada historia<br><em>merece ser contada</em></h1>
