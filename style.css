@@ -213,8 +213,8 @@ em { font-style: italic; color: var(--gold); }
     border: none;
     cursor: pointer;
     padding: 4px;
-    position: relative;
-    z-index: 1001;
+    position: fixed;
+    z-index: 9999;
 }
 .hamburger span {
     display: block;
