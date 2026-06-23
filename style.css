@@ -213,9 +213,22 @@ em { font-style: italic; color: var(--gold); }
     border: none;
     cursor: pointer;
     padding: 4px;
+
     position: fixed;
-    z-index: 9999;
+    top: 24px;
+    right: 24px;
+    z-index: 10001;
 }
+.nav-links {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+}
+
+.nav-links.open {
+    z-index: 1000;
+}
+
 .hamburger span {
     display: block;
     width: 24px; height: 2px;
