@@ -617,7 +617,22 @@ em { font-style: italic; color: var(--gold); }
     text-transform: uppercase;
     color: rgba(255,255,255,0.4);
 }
-.about-cta { margin-top: 32px; align-self: flex-start; }
+.about-cta {
+    display: inline-block;
+    margin-top: 32px;
+    align-self: flex-start;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    border-bottom: 1px solid transparent;
+    transition: all var(--transition);
+}
+.about-cta:hover {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+}
 
 /* ================================================
    TESTIMONIOS
