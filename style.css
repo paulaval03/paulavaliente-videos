@@ -216,8 +216,8 @@ em { font-style: italic; color: var(--gold); }
 
     position: fixed;
     top: 24px;
-    right: 24px;
-    z-index: 10001;
+    right: 30px;
+    z-index: 99999;
 }
 .nav-links {
     position: fixed;
