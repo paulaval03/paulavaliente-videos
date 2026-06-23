@@ -617,6 +617,7 @@ em { font-style: italic; color: var(--gold); }
     text-transform: uppercase;
     color: rgba(255,255,255,0.4);
 }
+.about-cta { margin-top: 32px; align-self: flex-start; }
 
 /* ================================================
    TESTIMONIOS
