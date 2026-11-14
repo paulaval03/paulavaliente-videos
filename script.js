@@ -88,6 +88,7 @@ contactForm.addEventListener('submit', async (e) => {
         headers: { 'Accept': 'application/json' }
     });
     if (res.ok) {
+        trackEvent('generate_lead', { method: 'formulario', servicio: data.get('servicio') || '' });
         btn.textContent = '✓ Mensaje enviado';
         contactForm.reset();
     } else {
@@ -117,4 +118,17 @@ animatedEls.forEach((el, i) => {
     el.style.transform = 'translateY(28px)';
     el.style.transition = `opacity 0.6s ease ${i * 0.07}s, transform 0.6s ease ${i * 0.07}s`;
     observer.observe(el);
+});
+
+// --- MEDICIÓN DE CONTACTOS (Google Analytics 4) ---
+function trackEvent(name, params) {
+    if (typeof gtag === 'function') gtag('event', name, params || {});
+}
+document.querySelectorAll('[data-track]').forEach(el => {
+    el.addEventListener('click', () => {
+        const tipo = el.dataset.track;
+        if (tipo === 'whatsapp') trackEvent('whatsapp_click', { ubicacion: el.classList.contains('whatsapp-float') ? 'boton_flotante' : 'contacto' });
+        else if (tipo === 'email') trackEvent('email_click');
+        else if (tipo === 'google_reviews') trackEvent('google_reviews_click');
+    });
 });
