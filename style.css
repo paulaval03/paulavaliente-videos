@@ -648,9 +648,9 @@ em { font-style: italic; color: var(--gold); }
 }
 .testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 28px;
-    max-width: 1200px;
+    max-width: 960px;
     margin: 0 auto;
 }
 .testimonial-card {
