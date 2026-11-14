@@ -654,6 +654,11 @@ em { font-style: italic; color: var(--gold); }
     margin: 0 auto;
 }
 .testimonial-card {
+    background: var(--white);
+    border-radius: 6px;
+    padding: 36px 32px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.06);
+    position: relative;
     display: flex;
     flex-direction: column;
 }
@@ -674,6 +679,11 @@ em { font-style: italic; color: var(--gold); }
     margin-bottom: 16px;
 }
 .testimonial-card p {
+    font-size: 0.85rem;
+    line-height: 1.8;
+    color: var(--text);
+    font-style: italic;
+    margin-bottom: 24px;
     flex-grow: 1;
 }
 .testimonial-author { border-top: 1px solid #ece8e2; padding-top: 18px; }
